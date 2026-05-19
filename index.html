@@ -1,874 +1,1131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-
-    <title>Kiran Kethanapalli | Portfolio</title>
-
-
-    <!-- ========================= -->
-    <!-- META TAGS -->
-    <!-- ========================= -->
-
-    <meta name="title"
-    content="Kiran Kethanapalli - EEE Student & Developer">
-
-    <meta name="description"
-    content="2nd Year EEE student passionate about Python, IoT, Embedded Systems, and web development.">
-
-    <meta name="keywords"
-    content="Kiran Kethanapalli, Python, IoT, Embedded Systems, HTML, Arduino">
-
-    <meta name="author"
-    content="Kiran Kethanapalli">
-
-
-    <!-- ========================= -->
-    <!-- CSS -->
-    <!-- ========================= -->
-
-    <style>
-
-        /* ========================= */
-        /* WHOLE WEBSITE */
-        /* ========================= */
-
-        *{
-
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-
-            font-family: Arial, sans-serif;
-
-            background: linear-gradient(
-                to right,
-                #050816,
-                #021b3a,
-                #003566
-            );
-
-            color:white;
-
-            overflow-x:hidden;
-        }
-
-
-        /* ========================= */
-        /* NAVBAR */
-        /* ========================= */
-
-        nav{
-
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-
-            padding:25px 80px;
-        }
-
-        .logo{
-
-            font-size:32px;
-            font-weight:bold;
-
-            color:#00e5ff;
-        }
-
-        .nav-links{
-
-            display:flex;
-            gap:40px;
-        }
-
-        .nav-links a{
-
-            text-decoration:none;
-            color:white;
-
-            font-size:18px;
-
-            transition:0.3s;
-        }
-
-        .nav-links a:hover{
-
-            color:#00e5ff;
-        }
-
-
-        /* ========================= */
-        /* HERO SECTION */
-        /* ========================= */
-
-        .hero{
-
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-
-            padding:80px;
-
-            min-height:90vh;
-        }
-
-        .hero-text{
-
-            width:50%;
-        }
-
-        .hero-text h2{
-
-            font-size:40px;
-            margin-bottom:10px;
-        }
-
-        .hero-text h1{
-
-            font-size:75px;
-
-            color:#00e5ff;
-
-            margin-bottom:20px;
-        }
-
-        .hero-text p{
-
-            font-size:22px;
-
-            line-height:1.8;
-
-            color:#d8d8d8;
-        }
-
-
-        /* ========================= */
-        /* BUTTONS */
-        /* ========================= */
-
-        .buttons{
-
-            margin-top:35px;
-        }
-
-        .btn{
-
-            padding:15px 35px;
-
-            border-radius:40px;
-
-            text-decoration:none;
-
-            font-size:18px;
-            font-weight:bold;
-
-            margin-right:20px;
-
-            transition:0.3s;
-        }
-
-        .btn-contact{
-
-            background:#00e5ff;
-            color:black;
-        }
-
-        .btn-contact:hover{
-
-            background:white;
-        }
-
-        .btn-projects{
-
-            border:2px solid #00e5ff;
-            color:white;
-        }
-
-        .btn-projects:hover{
-
-            background:#00e5ff;
-            color:black;
-        }
-
-
-        /* ========================= */
-        /* HERO IMAGE */
-        /* ========================= */
-
-        .hero-image{
-
-            width:40%;
-
-            display:flex;
-            justify-content:center;
-        }
-
-        .profile-img{
-
-            width:420px;
-
-            border-radius:30px;
-
-            box-shadow:
-            0px 0px 40px #00e5ff;
-
-            transition:0.5s;
-        }
-
-        .profile-img:hover{
-
-            transform:scale(1.03);
-        }
-
-
-        /* ========================= */
-        /* SECTIONS */
-        /* ========================= */
-
-        section{
-
-            padding:80px;
-        }
-
-        .section-title{
-
-            font-size:50px;
-
-            color:#00e5ff;
-
-            margin-bottom:40px;
-
-            text-align:center;
-        }
-
-
-        /* ========================= */
-        /* ABOUT */
-        /* ========================= */
-
-        .about-text{
-
-            font-size:22px;
-
-            line-height:2;
-
-            text-align:center;
-
-            color:#d8d8d8;
-        }
-
-
-        /* ========================= */
-        /* SKILLS */
-        /* ========================= */
-
-        .skills-container{
-
-            display:flex;
-            flex-wrap:wrap;
-
-            justify-content:center;
-
-            gap:25px;
-        }
-
-        .skill-card{
-
-            padding:20px 40px;
-
-            border-radius:20px;
-
-            background:#0d1b2a;
-
-            border:1px solid #00e5ff;
-
-            font-size:20px;
-
-            transition:0.3s;
-        }
-
-        .skill-card:hover{
-
-            transform:translateY(-5px);
-
-            box-shadow:0px 0px 20px #00e5ff;
-        }
-
-
-        /* ========================= */
-        /* PROJECTS */
-        /* ========================= */
-
-        .projects-container{
-
-            display:grid;
-
-            grid-template-columns:
-            repeat(auto-fit,minmax(300px,1fr));
-
-            gap:30px;
-        }
-
-        .project-card{
-
-            background:#0d1b2a;
-
-            padding:30px;
-
-            border-radius:20px;
-
-            border:1px solid #00e5ff;
-
-            transition:0.3s;
-        }
-
-        .project-card:hover{
-
-            transform:translateY(-8px);
-
-            box-shadow:0px 0px 20px #00e5ff;
-        }
-
-        .project-card h3{
-
-            color:#00e5ff;
-
-            margin-bottom:15px;
-        }
-
-        .project-card p{
-
-            color:#d8d8d8;
-
-            line-height:1.7;
-        }
-
-        .project-card a{
-
-            display:inline-block;
-
-            margin-top:20px;
-
-            color:#00e5ff;
-
-            text-decoration:none;
-
-            font-weight:bold;
-        }
-
-
-        /* ========================= */
-        /* CONTACT */
-        /* ========================= */
-
-        .contact{
-
-            text-align:center;
-        }
-
-        .contact p{
-
-            font-size:22px;
-
-            margin-top:20px;
-        }
-
-
-        /* ========================= */
-        /* FOOTER */
-        /* ========================= */
-
-        footer{
-
-            text-align:center;
-
-            padding:30px;
-
-            background:#020817;
-
-            margin-top:50px;
-        }
-        /* ========================= */
-/* CONTACT LINKS */
-       /* ========================= */
-
-.contact-link{
-
-    color:#00e5ff;
-
-    text-decoration:none;
-
-    font-size:22px;
-
-    transition:0.3s;
-}
-
-.contact-link:hover{
-
-    color:white;
-
-    text-shadow:0px 0px 10px f#00e5f;
-}
-
-
-        /* ========================= */
-        /* RESPONSIVE */
-        /* ========================= */
-
-        @media(max-width:1000px){
-
-            nav{
-
-                flex-direction:column;
-                gap:20px;
-            }
-
-            .hero{
-
-                flex-direction:column;
-
-                text-align:center;
-            }
-
-            .hero-text{
-
-                width:100%;
-            }
-
-            .hero-image{
-
-                width:100%;
-
-                margin-top:50px;
-            }
-
-            .hero-text h1{
-
-                font-size:55px;
-            }
-
-            .hero-text h2{
-
-                font-size:30px;
-            }
-
-            .profile-img{
-
-                width:300px;
-            }
-
-            section{
-
-                padding:50px 20px;
-            }
-        }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiran Kethanapalli | Portfolio</title>
+  <meta name="title" content="Kiran Kethanapalli - EEE Student & Developer">
+  <meta name="description" content="2nd Year EEE student passionate about Python, IoT, Embedded Systems, and web development.">
+  <meta name="keywords" content="Kiran Kethanapalli, Python, IoT, Embedded Systems, HTML, Arduino">
+  <meta name="author" content="Kiran Kethanapalli">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─────────────────────────────────────────── */
+    /* TOKENS */
+    /* ─────────────────────────────────────────── */
+    :root {
+      --bg:        #04080f;
+      --bg2:       #081020;
+      --bg3:       #0b1729;
+      --cyan:      #00e5ff;
+      --cyan-dim:  #00b8cc;
+      --cyan-glow: rgba(0,229,255,0.18);
+      --cyan-faint:rgba(0,229,255,0.06);
+      --white:     #f0f4f8;
+      --muted:     #8ba0b8;
+      --border:    rgba(0,229,255,0.18);
+      --card-bg:   rgba(11,23,41,0.85);
+      --font-display: 'Syne', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --radius:    16px;
+      --radius-lg: 24px;
+      --nav-h:     72px;
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* RESET + BASE */
+    /* ─────────────────────────────────────────── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* NOISE + GRID OVERLAY */
+    /* ─────────────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,229,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.025) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ambient orbs */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,229,255,0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb-bottom {
+      position: fixed;
+      bottom: -300px;
+      left: -200px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,100,200,0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    section, nav, footer { position: relative; z-index: 1; }
+
+    /* ─────────────────────────────────────────── */
+    /* SCROLL ANIMATION HELPER */
+    /* ─────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* NAV */
+    /* ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      background: rgba(4,8,15,0.75);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--cyan);
+      letter-spacing: -0.5px;
+      text-shadow: 0 0 20px rgba(0,229,255,0.5);
+      position: relative;
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .logo:hover::after { transform: scaleX(1); }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 1px;
+      background: var(--cyan);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    /* ─────────────────────────────────────────── */
+    /* HERO */
+    /* ─────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: calc(var(--nav-h) + 60px) 60px 80px;
+      gap: 60px;
+    }
+
+    .hero-text { flex: 1; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeSlideUp 0.8s 0.2s forwards;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px; height: 1px;
+      background: var(--cyan);
+      box-shadow: 0 0 6px var(--cyan);
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 7vw, 90px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -2px;
+      color: var(--white);
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeSlideUp 0.9s 0.35s forwards;
+    }
+
+    .hero-name span {
+      display: block;
+      color: var(--cyan);
+      text-shadow: 0 0 40px rgba(0,229,255,0.4);
+    }
+
+    .hero-desc {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 500px;
+      margin-top: 24px;
+      opacity: 0;
+      animation: fadeSlideUp 0.9s 0.5s forwards;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+      opacity: 0;
+      animation: fadeSlideUp 0.9s 0.65s forwards;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      background: var(--cyan-faint);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeSlideUp 0.9s 0.8s forwards;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #04080f;
+      box-shadow: 0 0 24px rgba(0,229,255,0.35);
+    }
+    .btn-primary:hover {
+      background: white;
+      box-shadow: 0 0 36px rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      border: 1.5px solid var(--border);
+      color: var(--white);
+      background: transparent;
+    }
+    .btn-ghost:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: var(--cyan-faint);
+      transform: translateY(-2px);
+    }
+
+    /* Hero image */
+    .hero-image {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: fadeSlideUp 1s 0.4s forwards;
+    }
+
+    .profile-wrapper {
+      position: relative;
+    }
+
+    .profile-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--cyan), transparent 60%, var(--cyan-dim));
+      z-index: 0;
+      animation: borderSpin 4s linear infinite;
+    }
+
+    .profile-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 26px;
+      background: var(--bg);
+      z-index: 1;
+    }
+
+    .profile-img {
+      position: relative;
+      z-index: 2;
+      width: 380px;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
+      /* Placeholder gradient when no image */
+      background: linear-gradient(135deg, #0b1f3a, #0d2a4a);
+    }
+
+    /* Floating badge */
+    .hero-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -30px;
+      z-index: 10;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .badge-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #00ff88;
+      box-shadow: 0 0 10px #00ff88;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .badge-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white);
+    }
+    .badge-text span { color: var(--cyan); }
+
+    /* ─────────────────────────────────────────── */
+    /* SECTION SHARED */
+    /* ─────────────────────────────────────────── */
+    section { padding: 100px 60px; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .section-title em {
+      font-style: normal;
+      color: var(--cyan);
+    }
+
+    .section-line {
+      width: 48px; height: 2px;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+      margin: 20px auto 0;
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* ABOUT */
+    /* ─────────────────────────────────────────── */
+    #about { background: var(--bg2); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-content p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .about-content p strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px var(--cyan-glow);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--cyan);
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(0,229,255,0.4);
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* SKILLS */
+    /* ─────────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      transition: all 0.3s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--cyan-faint), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--cyan);
+      box-shadow: 0 8px 32px var(--cyan-glow);
+      color: var(--cyan);
+    }
+
+    .skill-card:hover::before { opacity: 1; }
+
+    .skill-icon {
+      font-size: 26px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* PROJECTS */
+    /* ─────────────────────────────────────────── */
+    #projects { background: var(--bg2); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: all 0.35s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,229,255,0.35);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px var(--border);
+    }
+
+    .project-card:hover::before { opacity: 1; }
+
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      background: var(--cyan-faint);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-bottom: 18px;
+      width: fit-content;
+    }
+
+    .project-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .project-card p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cyan);
+      text-decoration: none;
+      padding: 8px 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--cyan-faint);
+      transition: all 0.3s;
+    }
+
+    .project-link:hover {
+      background: var(--cyan);
+      color: var(--bg);
+      border-color: var(--cyan);
+      box-shadow: 0 0 16px rgba(0,229,255,0.4);
+    }
+
+    .project-link svg {
+      width: 13px; height: 13px;
+    }
+
+    /* Featured project */
+    .project-card.featured {
+      grid-column: span 2;
+      border-color: rgba(0,229,255,0.3);
+      background: linear-gradient(135deg, rgba(11,23,41,0.95), rgba(0,60,100,0.2));
+    }
+
+    .project-card.featured .project-tag {
+      background: rgba(0,229,255,0.15);
+      border-color: rgba(0,229,255,0.4);
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* CONTACT */
+    /* ─────────────────────────────────────────── */
+    .contact-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-wrapper p {
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 28px;
+      text-decoration: none;
+      color: var(--white);
+      transition: all 0.3s;
+      min-width: 240px;
+    }
+
+    .contact-card:hover {
+      border-color: var(--cyan);
+      background: var(--cyan-faint);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px var(--cyan-glow);
+      color: var(--cyan);
+    }
+
+    .contact-icon {
+      width: 40px; height: 40px;
+      background: var(--cyan-faint);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      transition: background 0.3s;
+    }
+
+    .contact-card:hover .contact-icon {
+      background: rgba(0,229,255,0.15);
+    }
+
+    .contact-info { text-align: left; }
+    .contact-info .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    .contact-info .value { font-size: 14px; font-weight: 500; margin-top: 2px; }
+
+    /* ─────────────────────────────────────────── */
+    /* FOOTER */
+    /* ─────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(4,8,15,0.9);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer .footer-logo {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--cyan);
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* ANIMATIONS */
+    /* ─────────────────────────────────────────── */
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.6; transform: scale(0.85); }
+    }
+
+    @keyframes borderSpin {
+      from { background-position: 0% 50%; }
+      to   { background-position: 100% 50%; }
+    }
+
+    /* ─────────────────────────────────────────── */
+    /* RESPONSIVE */
+    /* ─────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .project-card.featured { grid-column: span 1; }
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 12px; }
+
+      .hero {
+        flex-direction: column;
+        padding: calc(var(--nav-h) + 40px) 24px 60px;
+        text-align: center;
+      }
+      .hero-eyebrow { margin: 0 auto 20px; }
+      .hero-desc { margin: 20px auto 0; }
+      .hero-tags, .hero-buttons { justify-content: center; }
+
+      .hero-image { margin-top: 48px; }
+      .profile-img { width: 280px; height: 340px; }
+      .hero-badge { left: 0; }
+
+      section { padding: 70px 24px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 24px; }
+    }
+
+    @media (max-width: 520px) {
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-stats { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
-
-
-    <!-- ========================= -->
-    <!-- NAVBAR -->
-    <!-- ========================= -->
-
-    <nav>
-
-        <div class="logo">
-
-            కిరణ్ కేథనపల్లి
-
-        </div>
-
-        <div class="nav-links">
-
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-
-        </div>
-
-    </nav>
-
-
-
-    <!-- ========================= -->
-    <!-- HERO SECTION -->
-    <!-- ========================= -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-text">
-
-            <h2>NAMASKARAM, I'M</h2>
-
-            <h1>Kiran Kethanapalli</h1>
-
-            <p>
-
-                2nd Year EEE Student passionate about
-                Python, IoT, Embedded Systems,
-                and web development.
-
-                Fast learner, project enthusiast,
-                and always ready to explore
-                new technologies and challenges.
-
-            </p>
-
-
-            <div class="buttons">
-
-                <a href="#contact"
-                class="btn btn-contact">
-
-                Contact Me
-
-                </a>
-
-
-                <a href="#projects"
-                class="btn btn-projects">
-
-                View Projects
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- ========================= -->
-        <!-- ADD YOUR PHOTO HERE -->
-        <!-- ========================= -->
-
-        <div class="hero-image">
-
-          <img src="myphoto.webp"
-           alt="Kiran"
-           class="profile-img">
-
-</div>
-
-    </section>
-
-
-
-    <!-- ========================= -->
-    <!-- ABOUT -->
-    <!-- ========================= -->
-
-    <section id="about">
-
-        <h2 class="section-title">
-
-            About Me
-
-        </h2>
-
-        <p class="about-text">
-
-            NAMASKARAM, I'm Kiran Kethanapalli,
-            a 2nd Year Electrical and Electronics
-            Engineering student.
-
-            I am passionate about Python programming,
-            IoT, Embedded Systems,
-            and web development.
-
-            I enjoy building real-world projects
-            and continuously learning new technologies
-            to improve my skills.
-
-            I am a fast learner,
-            project enthusiast,
-            and always excited to work on
-            innovative ideas and challenges.
-
-        </p>
-
-    </section>
-
-
-
-    <!-- ========================= -->
-    <!-- SKILLS -->
-    <!-- ========================= -->
-
-    <section id="skills">
-
-        <h2 class="section-title">
-
-            Skills
-
-        </h2>
-
-        <div class="skills-container">
-
-            <div class="skill-card">Python</div>
-
-            <div class="skill-card">C Programming</div>
-
-            <div class="skill-card">IoT</div>
-
-            <div class="skill-card">Embedded Systems</div>
-
-            <div class="skill-card">HTML</div>
-
-            <div class="skill-card">Arduino IDE</div>
-
-            <div class="skill-card">Blynk IoT</div>
-
-            <div class="skill-card">PVSyst</div>
-
-            <div class="skill-card">AutoCAD</div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ========================= -->
-    <!-- PROJECTS -->
-    <!-- ========================= -->
-
-    <section id="projects">
-
-        <h2 class="section-title">
-
-            Projects
-
-        </h2>
-
-        <div class="projects-container">
-
-
-            <div class="project-card">
-
-                <h3>BabyBuddy</h3>
-
-                <p>
-                    Smart project focused on child monitoring and assistance.
-                </p>
-
-                <a href="https://github.com/kirank1-8/Babybuddy"
-                target="_blank">
-
-                View Project →
-
-                </a>
-
-            </div>
-
-
-
-            <div class="project-card">
-
-                <h3>Cricket Score Dashboard</h3>
-
-                <p>
-                    Dashboard project for displaying cricket scores and match details.
-                </p>
-
-                <a href="https://github.com/kirank1-8/cricket_score_dashboard"
-                target="_blank">
-
-                View Project →
-
-                </a>
-
-            </div>
-
-
-
-            <div class="project-card">
-
-                <h3>AI Virtual Mouse</h3>
-
-                <p>
-                    AI-powered virtual mouse using computer vision and hand tracking.
-                </p>
-
-                <a href="https://github.com/kirank1-8/AI-Virtual-Mouse"
-                target="_blank">
-
-                View Project →
-
-                </a>
-
-            </div>
-
-
-
-            <div class="project-card">
-
-                <h3>Flappy Bird Python</h3>
-
-                <p>
-                    Python implementation of the classic Flappy Bird game.
-                </p>
-
-                <a href="https://github.com/kirank1-8/flappy-bird-python"
-                target="_blank">
-
-                View Project →
-
-                </a>
-
-            </div>
-
-
-
-            <div class="project-card">
-
-                <h3>Attendance System using ESP32</h3>
-
-                <p>
-                    IoT-based attendance management system using ESP32.
-                </p>
-
-                <a href="https://github.com/kirank1-8/attendance-system-using-ESP32"
-                target="_blank">
-
-                View Project →
-
-                </a>
-
-            </div>
-            <div class="col-lg-4 col-md-6">
-
-    <div class="card project-card">
-
-        <div class="card-body">
-
-            <h4 class="card-title"
-            style="color:#00e5ff;">
-
-                Syntax Marathon
-
-            </h4>
-
-            <p class="description">
-
-                Modern typing speed game built using HTML, CSS, and JavaScript with live WPM tracking, accuracy system, and multiple difficulty levels.
-
-            </p>
-
-
-            <!-- VIEW PROJECT -->
-
-            <a href="https://github.com/kirank1-8/syntax_marathon"
-            target="_blank"
-            class="btn btn-sm primary-bg-btn">
-
-                View Project →
-
-            </a>
-
-
-
-            <!-- LIVE DEMO -->
-
-            <a href="https://kirank1-8.github.io/syntax_marathon/"
-            target="_blank"
-            class="btn btn-sm primary-bg-btn ms-2">
-
-                Live Demo →
-
-            </a>
-
-        </div>
-
+  <div class="orb-bottom"></div>
+
+  <!-- ═══════════════════════════════ NAV ═══ -->
+  <nav>
+    <div class="logo">కిరణ్ కేథనపల్లి</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ══ -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Namaskaram, I'm</div>
+
+      <h1 class="hero-name">
+        Kiran<br>
+        <span>Kethanapalli</span>
+      </h1>
+
+      <p class="hero-desc">
+        2nd Year <strong>Electrical &amp; Electronics Engineering</strong> student — passionate about Python, IoT, Embedded Systems, and building real-world projects that push boundaries.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Python</span>
+        <span class="tag">IoT</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">EEE Student</span>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Contact Me
+        </a>
+        <a href="#projects" class="btn btn-ghost">
+          View Projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+        </a>
+      </div>
     </div>
 
-</div>
-    
-
-
-
+    <div class="hero-image">
+      <div class="profile-wrapper">
+        <img src="myphoto.webp" alt="Kiran Kethanapalli" class="profile-img">
+        <div class="hero-badge">
+          <div class="badge-dot"></div>
+          <div class="badge-text">Open to <span>opportunities</span></div>
         </div>
+      </div>
+    </div>
+  </section>
 
-    </section>
-
-
-
-    <!-- ========================= -->
-<!-- CONTACT -->
-<!-- ========================= -->
-
-<section id="contact">
-
-    <h2 class="section-title">
-
-        Contact
-
-    </h2>
-
-    <div class="contact">
-
-        <!-- GITHUB -->
-
-        <p>
-
-            <a href="https://github.com/kirank1-8"
-            target="_blank"
-            class="contact-link">
-
-            GitHub: github.com/kirank1-8
-
-            </a>
-
-        </p>
-
-
-        <!-- EMAIL -->
-
-        <p>
-
-            <a href="mailto:kirankethanapalli18@gmail.com"
-            class="contact-link">
-
-            Email: kirankethanapalli18@gmail.com
-
-            </a>
-
-        </p>
-
+  <!-- ═══════════════════════════════ ABOUT ═ -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-label">Who I Am</span>
+      <h2 class="section-title">About <em>Me</em></h2>
+      <div class="section-line"></div>
     </div>
 
-</section>
+    <div class="about-grid">
+      <div class="about-content reveal">
+        <p>
+          <strong>Namaskaram!</strong> I'm Kiran Kethanapalli, a 2nd Year Electrical and Electronics Engineering student with a deep passion for bridging the gap between hardware and software.
+        </p>
+        <p>
+          I thrive at the intersection of <strong>Python programming, IoT, and Embedded Systems</strong> — building projects that solve real-world problems. From AI-powered applications to smart attendance systems, I love exploring how technology can make life better.
+        </p>
+        <p>
+          I'm a <strong>fast learner and project enthusiast</strong>, always excited to pick up new tools and tackle innovative challenges head-on.
+        </p>
+      </div>
 
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2nd</div>
+          <div class="stat-label">Year EEE</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">9+</div>
+          <div class="stat-label">Skills Learned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Curiosity</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══════════════════════════════ SKILLS ═ -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-label">What I Know</span>
+      <h2 class="section-title">My <em>Skills</em></h2>
+      <div class="section-line"></div>
+    </div>
 
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
+    <div class="skills-grid">
+      <div class="skill-card reveal"><span class="skill-icon">🐍</span>Python</div>
+      <div class="skill-card reveal"><span class="skill-icon">⚙️</span>C Programming</div>
+      <div class="skill-card reveal"><span class="skill-icon">📡</span>IoT</div>
+      <div class="skill-card reveal"><span class="skill-icon">🔌</span>Embedded Systems</div>
+      <div class="skill-card reveal"><span class="skill-icon">🌐</span>HTML / CSS</div>
+      <div class="skill-card reveal"><span class="skill-icon">🤖</span>Arduino IDE</div>
+      <div class="skill-card reveal"><span class="skill-icon">📱</span>Blynk IoT</div>
+      <div class="skill-card reveal"><span class="skill-icon">☀️</span>PVSyst</div>
+      <div class="skill-card reveal"><span class="skill-icon">📐</span>AutoCAD</div>
+    </div>
+  </section>
 
-<footer>
+  <!-- ═══════════════════════════════ PROJECTS ═ -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">What I've Built</span>
+      <h2 class="section-title">My <em>Projects</em></h2>
+      <div class="section-line"></div>
+    </div>
 
-    <p>
+    <div class="projects-grid">
 
-        © 2026 Kiran Kethanapalli
+      <!-- SmartGrid PF Analyzer – Featured -->
+      <div class="project-card featured reveal">
+        <div class="project-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          Featured · EEE / Power Systems
+        </div>
+        <h3>SmartGrid Power Factor Analyzer</h3>
+        <p>
+          A power factor analysis tool for smart grid systems. Analyzes electrical power quality, computes power factor, and provides insights to optimize reactive power compensation — combining EEE domain expertise with Python programming.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/smartgrid-pf-analyzer" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
 
-    </p>
+      <!-- BabyBuddy -->
+      <div class="project-card reveal">
+        <div class="project-tag">IoT · Hardware</div>
+        <h3>BabyBuddy</h3>
+        <p>Smart child monitoring and assistance system using IoT sensors and real-time alerts to keep caregivers informed.</p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/Babybuddy" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
 
-</footer>
+      <!-- Cricket Score Dashboard -->
+      <div class="project-card reveal">
+        <div class="project-tag">Web · Dashboard</div>
+        <h3>Cricket Score Dashboard</h3>
+        <p>Live cricket match dashboard displaying scores, player stats, and match timelines with a clean, real-time interface.</p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/cricket_score_dashboard" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
 
+      <!-- AI Virtual Mouse -->
+      <div class="project-card reveal">
+        <div class="project-tag">AI · Computer Vision</div>
+        <h3>AI Virtual Mouse</h3>
+        <p>AI-powered virtual mouse using computer vision and hand-tracking with MediaPipe — control your cursor using just your hand.</p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/AI-Virtual-Mouse" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Flappy Bird Python -->
+      <div class="project-card reveal">
+        <div class="project-tag">Python · Game Dev</div>
+        <h3>Flappy Bird Python</h3>
+        <p>Classic Flappy Bird game recreated in Python using Pygame — complete with physics, collision detection, and score tracking.</p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/flappy-bird-python" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Attendance System -->
+      <div class="project-card reveal">
+        <div class="project-tag">IoT · ESP32</div>
+        <h3>Attendance System</h3>
+        <p>IoT-based smart attendance management system using ESP32, automating attendance tracking with real-time cloud sync.</p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/attendance-system-using-ESP32" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Smart Grid PF Analyzer -->
+      <div class="project-card reveal">
+        <div class="project-tag">Python · Energy</div>
+        <h3>Smart Grid PF Analyzer</h3>
+        <p>Smart grid power factor analyzer with real-time monitoring, data visualization, and automated reporting — built for energy systems and power quality analysis.</p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/smartgrid-pf-analyzer" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-tag">Web · JavaScript</div>
+        <h3>Syntax Marathon</h3>
+        <p>Modern typing speed game with live WPM tracking, accuracy system, and multiple difficulty levels — built with HTML, CSS, and JavaScript.</p>
+        <div class="project-links">
+          <a href="https://github.com/kirank1-8/syntax_marathon" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://kirank1-8.github.io/syntax_marathon/" target="_blank" class="project-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3v2H7v14h14v-7h2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7zm7 0v6h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H15V3h6z"/></svg>
+            Live Demo
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═ -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <span class="section-label">Let's Connect</span>
+      <h2 class="section-title">Get in <em>Touch</em></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-wrapper">
+      <p class="reveal">
+        Have a project in mind, a collaboration idea, or just want to say hello? I'd love to hear from you. Reach out through any of the channels below.
+      </p>
+
+      <div class="contact-cards reveal">
+        <a href="https://github.com/kirank1-8" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="label">GitHub</div>
+            <div class="value">kirank1-8</div>
+          </div>
+        </a>
+
+        <a href="mailto:kirankethanapalli18@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="label">Email</div>
+            <div class="value">kirankethanapalli18@gmail.com</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═ -->
+  <footer>
+    <div class="footer-logo">కిరణ్</div>
+    <p>© 2026 Kiran Kethanapalli · Built with passion</p>
+    <p style="font-size:12px; color: var(--muted);">EEE Student · Developer</p>
+  </footer>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SCROLL REVEAL JS -->
+  <!-- ─────────────────────────────────────────── -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Stagger reveals within grids
+    document.querySelectorAll('.skills-grid .reveal, .projects-grid .reveal').forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 6) * 80}ms`;
+    });
+  </script>
 </body>
-
 </html>
